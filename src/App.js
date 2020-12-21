@@ -1,7 +1,10 @@
 import './App.css';
+import Heading from './heading/Heading';
 
 function App() {
-  return <h1>Welcome to The Shoppies</h1>;
+  return (
+    <Heading />
+  );
 }
 
 export default App;
