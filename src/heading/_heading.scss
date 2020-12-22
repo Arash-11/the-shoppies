@@ -1,8 +1,18 @@
+$heading-padding: 0.5rem;
+
 .heading {
-  outline: 1px solid red;
+  padding: $heading-padding;
   text-align: center;
 }
 
 .heading__title {
   display: inline-block;
+}
+
+.heading__button {
+  position: absolute;
+  right: 5rem;
+  top: $heading-padding + 1rem;
+  border: none;
+  font-size: 1rem;
 }
