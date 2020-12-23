@@ -15,6 +15,32 @@
   font-size: 1rem;
 }
 
+.search {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.search__search-input {
+  padding: 1rem 1rem;
+  width: 30rem;
+  font-size: 1.1rem;
+}
+
+.search__filter-button {
+  padding: 0.5rem;
+  margin-left: 3rem;
+  border-radius: 30px;
+}
+
+.movie-card {
+  outline: 1px solid red;
+  display: inline-block;
+}
+
+.movie-card__text-content {
+  padding: 1rem;
+}
+
 * {
   padding: 0;
   margin: 0;
