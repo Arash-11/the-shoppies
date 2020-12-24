@@ -1,19 +1,19 @@
-import React , { useState } from 'react';
+import React from 'react';
 
-function SearchInput() {
-  const [inputValue, setInputValue] = useState('');
+const Searchbar = (props) => {
+  // const [inputValue, setInputValue] = useState('');
 
-  const handleChange = (event) => {
-    const {value} = event.target;
-    setInputValue(() => value);
-  }
+  // const handleChange = (event) => {
+  //   const {value} = event.target;
+  //   setInputValue(() => value);
+  // }
 
   return (
     <div className="search">
       <input
         className="search__search-input"
-        value={inputValue}
-        onChange={handleChange}
+        value={props.inputValue}
+        onChange={props.handleChange}
         placeholder="Search..."
       />
       <button className="search__filter-button">A - Z</button>
@@ -23,4 +23,4 @@ function SearchInput() {
   );
 }
 
-export default SearchInput;
+export default Searchbar;

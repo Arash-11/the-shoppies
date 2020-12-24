@@ -4,7 +4,7 @@
     "sources": [
         "App.scss",
         "heading/_heading.scss",
-        "components/_search-input.scss",
+        "components/_searchbar.scss",
         "components/_movie-card.scss"
     ],
     "names": [],

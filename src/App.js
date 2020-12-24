@@ -1,13 +1,13 @@
 import './App.css';
 import Heading from './heading/Heading';
-import SearchInput from './components/SearchInput';
+import Searchbar from './components/Searchbar';
 import MovieCard from './components/MovieCard';
 
-function App() {
+const App = () => {
   return (
     <>
       <Heading />
-      <SearchInput />
+      <Searchbar />
       <MovieCard />
     </>
   );
