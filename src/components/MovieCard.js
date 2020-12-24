@@ -1,10 +1,10 @@
 import React from 'react';
 
-function MovieCard() {
+function MovieCard(props) {
   return (
     <div className="movie-card">
       <div className="movie-card__text-content">
-        <p className="movie-card__title">Movie title here <span>(Year)</span></p> 
+        <p className="movie-card__title">{props.title} <span>({props.year})</span></p> 
         <button className="movie-card__button">Nominate</button>
       </div>
     </div>
