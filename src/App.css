@@ -11,7 +11,7 @@
 }
 
 .search {
-  padding: 4rem 1rem;
+  padding: 1rem 0;
   text-align: center;
 }
 
@@ -19,12 +19,6 @@
   padding: 1rem 1rem;
   width: 30rem;
   font-size: 1.1rem;
-}
-
-.search__filter-button {
-  padding: 0.5rem;
-  margin-left: 3rem;
-  border-radius: 30px;
 }
 
 .movie-card {
@@ -38,6 +32,7 @@
 
 .sections__movie-listings {
   margin: 2rem 0.5rem 0 1rem;
+  padding: 1rem 0.5rem;
   width: 62%;
   height: 85vh;
   background: #fff;
@@ -48,6 +43,7 @@
 
 .sections__nominations {
   margin: 2rem 1rem 0 0.5rem;
+  padding: 1rem 0.5rem;
   width: 32%;
   height: 85vh;
   background: #fff;
