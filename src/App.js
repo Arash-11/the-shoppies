@@ -1,14 +1,16 @@
 import './App.css';
 import Heading from './heading/Heading';
-import Searchbar from './components/Searchbar';
-import MovieCard from './components/MovieCard';
+import MovieListings from './sections/MovieListings';
+import Nominations from './sections/Nominations';
 
 const App = () => {
   return (
     <>
       <Heading />
-      <Searchbar />
-      <MovieCard />
+      <div className="sections">
+        <MovieListings />
+        <Nominations />
+      </div>
     </>
   );
 }

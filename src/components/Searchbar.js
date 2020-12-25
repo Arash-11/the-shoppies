@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Searchbar = (props) => {
+function Searchbar(props) {
   // const [inputValue, setInputValue] = useState('');
 
   // const handleChange = (event) => {
