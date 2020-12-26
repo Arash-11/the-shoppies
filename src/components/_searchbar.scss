@@ -1,5 +1,6 @@
 .search {
-  padding: 1rem 0;
+  padding: 1.5rem 0;
+  margin: 0 0 1.5rem;
   text-align: center;
 }
 
@@ -7,4 +8,7 @@
   padding: 1rem 1rem;
   width: 30rem;
   font-size: 1.1rem;
+  border: none;
+  box-shadow: 0 8px 10px rgba(0,0,0,0.06);
+  outline-color:grey;
 }

@@ -10,6 +10,7 @@ $section-card-padding: 1rem 0.5rem;
   background: #fff;
   border-radius: 5px;
   box-shadow: $section-card-shadow;
+  overflow-y: auto;
 }
 
 .sections__nominations__title {

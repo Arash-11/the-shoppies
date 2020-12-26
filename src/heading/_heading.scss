@@ -5,10 +5,9 @@ $heading-padding: 0.6rem;
   text-align: center;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-.heading__title {
-  display: inline-block;
+  &__title {
+    display: inline-block;
+  }
 }
 
 // .heading__button {
