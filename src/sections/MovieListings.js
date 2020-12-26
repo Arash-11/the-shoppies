@@ -52,12 +52,13 @@ function MovieListings() {
       setMoviesData(previousValues => (
         [...previousValues, {id: imdbID, title: Title, year: Year, img: Poster }]
       ));
-      console.log(Poster);
     });
   }
 
-  const nominateMovie = () => {
-    console.log('nominated!');
+  const nominateMovie = (movieID) => {
+    // get movie info associated with this movieID from 'moviesData' array
+    const selectedMovie = moviesData.find(movie => movie.id === movieID);
+    console.log(selectedMovie);
   }
 
   return (
@@ -71,6 +72,7 @@ function MovieListings() {
           moviesData.map(movie => (
             <MovieCard
               key={movie.id}
+              id={movie.id}
               imgSrc={movie.img}
               title={movie.title}
               year={movie.year}

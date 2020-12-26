@@ -1,0 +1,58 @@
+@import './searchbar';
+@import './movie-card';
+
+.sections__movie-listings {
+  margin: 2rem 0.5rem 0 1rem;
+  width: 60%;
+}
+
+.sections__movie-listings__content {
+  @extend %flex-row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-left: 1%;
+  padding: $section-padding;
+  width: 98%;
+  height: $section-height;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: $section-shadow;
+  overflow-y: auto;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 0.7rem;
+  }
+  &::-webkit-scrollbar-thumb {
+      background-color: $gainsboro-light;
+      border-radius: 20px;
+  }
+  &::-webkit-scrollbar-track {
+      background-color: #fff;
+  }
+}
+
+.sections__movie-listings__content__error {
+  margin: 0 0 10rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.spinner {
+  position: relative;
+  bottom: 8rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid $gainsboro;
+  border-top-color: transparent;
+  animation: 1.2s linear infinite spinning;
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

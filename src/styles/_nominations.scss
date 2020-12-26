@@ -1,0 +1,21 @@
+.sections__nominations {
+  margin: 2rem 1rem 0 0.5rem;
+  width: 32%;
+  padding: $section-padding;
+  height: $section-height;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: $section-shadow;
+  overflow-y: auto;
+}
+
+.sections__nominations__title {
+  padding: 1.5rem 0;
+  border-radius: 10px;
+  background-color: $orange-red;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  z-index: 2;
+}

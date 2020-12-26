@@ -1,6 +1,7 @@
-@import 'heading/heading';
-@import 'sections/movie-listings';
-@import 'sections/nominations';
+@import 'styles/variables';
+@import 'styles/heading';
+@import 'styles/movie-listings';
+@import 'styles/nominations';
 
 *, *::before, *::after {
   padding: 0;
@@ -13,7 +14,8 @@
 }
 
 body {
-  background-color: #F4F5FA;
+  font-family: 'Poppins', sans-serif;
+  background-color: $whitesmoke;
   overflow: hidden;
 }
 
@@ -26,8 +28,6 @@ body button {
 }
 
 .sections {
-  display: flex;
-  flex-direction: row;
+  @extend %flex-row;
   justify-content: space-around;
-  align-items: center;
 }

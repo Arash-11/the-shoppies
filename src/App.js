@@ -1,5 +1,5 @@
 import './App.css';
-import Heading from './heading/Heading';
+import Heading from './components/Heading';
 import MovieListings from './sections/MovieListings';
 import Nominations from './sections/Nominations';
 
