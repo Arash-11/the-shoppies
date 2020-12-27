@@ -8,8 +8,8 @@ function MovieCard(props) {
         <p className="movie-card__title">
           {props.title} <span>({props.year})</span>
         </p> 
-        <button className="movie-card__button" onClick={() => props.nominate(props.id)}>
-          nominate
+        <button className="movie-card__button" onClick={() => props.selectMovie(props.id)}>
+          {props.buttonLabel}
         </button>
       </div>
     </div>

@@ -1,21 +1,34 @@
 .sections__nominations {
   margin: 2rem 1rem 0 0.5rem;
   width: 32%;
-  padding: $section-padding;
-  height: $section-height;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: $section-shadow;
-  overflow-y: auto;
 }
 
 .sections__nominations__title {
+  position: relative;
+  top: 0.5rem;
   padding: 1.5rem 0;
   border-radius: 10px;
   background-color: $orange-red;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   color: #fff;
   text-align: center;
+  font-size: 1.5rem;
   font-weight: 400;
   z-index: 2;
+}
+
+.sections__nominations__content {
+  // using flexbox to prevent the margin between the 'movie cards' from collapsing - if we just rely on
+  // the margin we set in _movie-card.scss, the margins will collapse and the margin difference will
+  // not be different than the 'MovieListings' section.
+  @extend %flex-col;
+  justify-content: space-around;
+  padding: $section-padding;
+  height: $section-height;
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: $section-shadow;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @extend %custom-scrollbar;
 }

@@ -4,7 +4,7 @@ import Searchbar from '../components/Searchbar';
 import MovieCard from '../components/MovieCard';
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-function MovieListings() {
+function MovieListings(props) {
   const endpoint = `http://www.omdbapi.com/?apikey=${API_KEY}&type=movie&s=`;
 
   // state for Searchbar input value
@@ -58,7 +58,7 @@ function MovieListings() {
   const nominateMovie = (movieID) => {
     // get movie info associated with this movieID from 'moviesData' array
     const selectedMovie = moviesData.find(movie => movie.id === movieID);
-    console.log(selectedMovie);
+    props.nominateMovie(selectedMovie);
   }
 
   return (
@@ -76,7 +76,8 @@ function MovieListings() {
               imgSrc={movie.img}
               title={movie.title}
               year={movie.year}
-              nominate={nominateMovie}
+              buttonLabel='nominate'
+              selectMovie={nominateMovie}
             />
           ))
         }
