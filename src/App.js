@@ -9,9 +9,15 @@ const App = () => {
   const [nominations, setNominations] = useState([]);
 
   const nominateMovie = (selectedMovie) => {
+    console.log(selectedMovie.isNominated);
+    // ensure nominations list does not add a duplicate
+    if (nominations.includes(selectedMovie)) {
+      return null;
+    }
     setNominations(previousValues => (
       [...previousValues, selectedMovie]
     ));
+    
   }
 
   const removeNomination = (movieID) => {
@@ -25,7 +31,7 @@ const App = () => {
       <Heading />
       <div className="sections">
         <MovieListings nominateMovie={nominateMovie}/>
-        <Nominations>
+        <Nominations count={nominations.length}>
           {
             nominations.map(movie => (
               <MovieCard

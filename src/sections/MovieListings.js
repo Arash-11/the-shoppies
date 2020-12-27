@@ -15,6 +15,8 @@ function MovieListings(props) {
   // state for error messages that appear when running 'getMovieData' function
   const [errorMessage, setErrorMessage] = useState('');
 
+  const [shouldFadeButton, setShouldFadeButton] = useState(false);
+
   // this function runs when changes are made in the input field of 'Searchbar'
   const handleChange = (event) => {
     const {value} = event.target;
@@ -50,15 +52,17 @@ function MovieListings(props) {
       // 'Title', 'Year', 'Poster' here should be capitalized per the API's structure
       const { imdbID, Title, Year, Poster } = movie;
       setMoviesData(previousValues => (
-        [...previousValues, {id: imdbID, title: Title, year: Year, img: Poster }]
+        [...previousValues, { id: imdbID, title: Title, year: Year, img: Poster, isNominated: false }]
       ));
     });
   }
 
-  const nominateMovie = (movieID) => {
+  const selectMovie = (movieID) => {
     // get movie info associated with this movieID from 'moviesData' array
     const selectedMovie = moviesData.find(movie => movie.id === movieID);
+    selectedMovie.isNominated = true;
     props.nominateMovie(selectedMovie);
+    setShouldFadeButton(true);
   }
 
   return (
@@ -77,7 +81,8 @@ function MovieListings(props) {
               title={movie.title}
               year={movie.year}
               buttonLabel='nominate'
-              selectMovie={nominateMovie}
+              selectMovie={selectMovie}
+              shouldFadeButton={shouldFadeButton}
             />
           ))
         }

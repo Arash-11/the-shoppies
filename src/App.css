@@ -135,6 +135,16 @@
   opacity: 0.85;
 }
 
+.button--fade {
+  outline: none;
+  opacity: 0.3;
+}
+
+.button--fade:hover {
+  opacity: 0.3;
+  cursor: default;
+}
+
 .sections__movie-listings {
   margin: 2rem 0.5rem 0 1rem;
   width: 60%;
@@ -208,16 +218,18 @@
   background-color: #E83600;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.22), 0 1px 2px rgba(0, 0, 0, 0.24);
   color: #fff;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 400;
   z-index: 2;
 }
 
 .sections__nominations__content {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding: 1rem 0;
   height: 76vh;
   background: #fff;
