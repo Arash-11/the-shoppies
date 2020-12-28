@@ -1,6 +1,7 @@
 import React , { useState } from 'react';
 import './App.css';
 import Heading from './components/Heading';
+import Banner from './components/Banner';
 import MovieCard from './components/MovieCard';
 import Nominations from './components/Nominations';
 import MovieListings from './sections/MovieListings';
@@ -25,7 +26,8 @@ const App = () => {
   return (
     <MovieContext.Provider value={nominations}>
       <Heading />
-      <div className="sections">
+      <div className={`sections ${nominations.length === 5 ? "sections--with-banner" : ""}`}>
+        <Banner />
         <MovieListings nominateMovie={nominateMovie}/>
         <Nominations count={nominations.length}>
           {

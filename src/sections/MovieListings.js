@@ -18,6 +18,8 @@ function MovieListings(props) {
 
   const nominationsArray = useContext(MovieContext);
 
+  const isNominationsListCompleted = nominationsArray.length === 5;
+
   // this function runs when changes are made in the input field of 'Searchbar'
   const handleChange = (event) => {
     const {value} = event.target;
@@ -77,7 +79,7 @@ function MovieListings(props) {
         inputValue={inputValue}
         handleChange={handleChange}
       />
-      <div className="sections__movie-listings__content">
+      <div className={`sections__movie-listings__content ${isNominationsListCompleted ? "movie-listings--banner" : ""}`}>
         {
           moviesData.map(movie => (
             <MovieCard
@@ -89,10 +91,14 @@ function MovieListings(props) {
               buttonLabel='nominate'
               selectMovie={selectMovie}
               shouldFadeButton={
-                nominationsArray.find(item => item.id === movie.id) || nominationsArray.length === 5
+                nominationsArray.find(item => item.id === movie.id) || isNominationsListCompleted
               }
             />
           ))
+        }
+        {
+          inputValue === '' &&
+          <p className="sections__movie-listings__content__placeholder">Search for movies to add to nomination list.</p>
         }
         {
           errorMessage === 'Too many results.' && moviesData.length < 1 &&

@@ -2,7 +2,7 @@ import React from 'react';
 
 function MovieCard(props) {
   return (
-    <div className="movie-card">
+    <div className={`movie-card ${props.buttonLabel === "remove" ? "nominations--animation" : ""}`}>
       <img
         src={props.imgSrc}
         className={`movie-card__img ${props.buttonLabel === "remove" ? "nominations--img" : ""}`}
