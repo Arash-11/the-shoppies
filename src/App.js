@@ -2,32 +2,28 @@ import React , { useState } from 'react';
 import './App.css';
 import Heading from './components/Heading';
 import MovieCard from './components/MovieCard';
+import Nominations from './components/Nominations';
 import MovieListings from './sections/MovieListings';
-import Nominations from './sections/Nominations';
+import MovieContext from './MovieContext';
 
 const App = () => {
   const [nominations, setNominations] = useState([]);
 
   const nominateMovie = (selectedMovie) => {
-    console.log(selectedMovie.isNominated);
     // ensure nominations list does not add a duplicate
-    if (nominations.includes(selectedMovie)) {
-      return null;
-    }
+    const isAlreadyNominated = nominations.find(movie => movie.id === selectedMovie.id);
+    if (isAlreadyNominated) return null;
     setNominations(previousValues => (
       [...previousValues, selectedMovie]
     ));
-    
   }
 
   const removeNomination = (movieID) => {
-    setNominations(() => (
-      nominations.filter(movie => movie.id !== movieID)
-    ));
+    setNominations(nominations.filter(movie => movie.id !== movieID));
   }
 
   return (
-    <>
+    <MovieContext.Provider value={nominations}>
       <Heading />
       <div className="sections">
         <MovieListings nominateMovie={nominateMovie}/>
@@ -47,7 +43,7 @@ const App = () => {
           }
         </Nominations>
       </div>
-    </>
+    </MovieContext.Provider>
   );
 }
 

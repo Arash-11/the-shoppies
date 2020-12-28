@@ -1,11 +1,12 @@
-import React , { useState } from 'react';
+import React , { useState , useContext } from 'react';
+import MovieContext from '../MovieContext';
 import axios from 'axios';
 import Searchbar from '../components/Searchbar';
 import MovieCard from '../components/MovieCard';
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 function MovieListings(props) {
-  const endpoint = `http://www.omdbapi.com/?apikey=${API_KEY}&type=movie&s=`;
+  const endpoint = `http://www.omdbapi.com/?apikey=${API_KEY}&type=movie`;
 
   // state for Searchbar input value
   const [inputValue, setInputValue] = useState('');
@@ -15,7 +16,7 @@ function MovieListings(props) {
   // state for error messages that appear when running 'getMovieData' function
   const [errorMessage, setErrorMessage] = useState('');
 
-  const [shouldFadeButton, setShouldFadeButton] = useState(false);
+  const nominationsArray = useContext(MovieContext);
 
   // this function runs when changes are made in the input field of 'Searchbar'
   const handleChange = (event) => {
@@ -30,14 +31,17 @@ function MovieListings(props) {
 
   const getMovieData = async (input) => {
     try {
-      const response = await axios.get(`${endpoint}${input}`);
-      if (response.data.Error === 'Too many results.') {
-        setErrorMessage('Too many results.');
+      // limiting OMDb API search results to 5 pages
+      for (let i = 1; i < 6; i++) {
+        const response = await axios.get(`${endpoint}&s=${input}&page=${i}`);
+        if (response.data.Error === 'Too many results.') {
+          setErrorMessage('Too many results.');
+        }
+        else if (response.data.Error === 'Movie not found!') {
+          setErrorMessage('Movie not found!');
+        }
+        else displayMovieData(response);
       }
-      else if (response.data.Error === 'Movie not found!') {
-        setErrorMessage('Movie not found!');
-      }
-      else displayMovieData(response);
     }
     catch (error) {
       console.log(error);
@@ -52,17 +56,19 @@ function MovieListings(props) {
       // 'Title', 'Year', 'Poster' here should be capitalized per the API's structure
       const { imdbID, Title, Year, Poster } = movie;
       setMoviesData(previousValues => (
-        [...previousValues, { id: imdbID, title: Title, year: Year, img: Poster, isNominated: false }]
+        [
+          ...previousValues, 
+          { id: imdbID, title: Title, year: Year, img: Poster }
+        ]
       ));
     });
   }
 
   const selectMovie = (movieID) => {
+    if (nominationsArray.length === 5) return null;
     // get movie info associated with this movieID from 'moviesData' array
     const selectedMovie = moviesData.find(movie => movie.id === movieID);
-    selectedMovie.isNominated = true;
     props.nominateMovie(selectedMovie);
-    setShouldFadeButton(true);
   }
 
   return (
@@ -82,20 +88,22 @@ function MovieListings(props) {
               year={movie.year}
               buttonLabel='nominate'
               selectMovie={selectMovie}
-              shouldFadeButton={shouldFadeButton}
+              shouldFadeButton={
+                nominationsArray.find(item => item.id === movie.id) || nominationsArray.length === 5
+              }
             />
           ))
         }
         {
-          errorMessage === 'Too many results.' && 
+          errorMessage === 'Too many results.' && moviesData.length < 1 &&
           <div className="spinner"></div>
         }
         {
-          errorMessage === 'Movie not found!' && 
+          errorMessage === 'Movie not found!' && moviesData.length < 1 &&
           <p className="sections__movie-listings__content__error">No search results available.</p>
         }
         {
-          errorMessage === 'Something went wrong.' && 
+          errorMessage === 'Something went wrong.' &&
           <p className="sections__movie-listings__content__error">Something went wrong, please try again later.</p>
         }
       </div>
