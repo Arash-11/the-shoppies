@@ -5,7 +5,7 @@ import Banner from './components/Banner';
 import MovieCard from './components/MovieCard';
 import Nominations from './components/Nominations';
 import MovieListings from './sections/MovieListings';
-import MovieContext from './MovieContext';
+import MovieContext from './Context';
 
 const App = () => {
   const [nominations, setNominations] = useState([]);

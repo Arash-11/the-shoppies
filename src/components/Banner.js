@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-// import MovieContext from '../MovieContext';
+// import MovieContext from '../Context';
 
 function Banner() {
   // const nominationsArray = useContext(MovieContext);

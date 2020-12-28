@@ -24,30 +24,31 @@
           align-items: center;
 }
 
-.sections__movie-listings__content::-webkit-scrollbar, .sections__nominations__content::-webkit-scrollbar {
+.sections__movie-listings__content::-webkit-scrollbar, .sections__nominations__content::-webkit-scrollbar, body::-webkit-scrollbar {
   width: 0.7rem;
 }
 
-.sections__movie-listings__content::-webkit-scrollbar-thumb, .sections__nominations__content::-webkit-scrollbar-thumb {
+.sections__movie-listings__content::-webkit-scrollbar-thumb, .sections__nominations__content::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
   background-color: #E1E2E6;
   border-radius: 20px;
 }
 
-.sections__movie-listings__content::-webkit-scrollbar-track, .sections__nominations__content::-webkit-scrollbar-track {
+.sections__movie-listings__content::-webkit-scrollbar-track, .sections__nominations__content::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
   background-color: #fff;
 }
 
 .heading {
   position: relative;
   padding: 0.4rem;
-  height: 3.5rem;
-  background-color: #E83600;
+  height: 3rem;
+  background: -webkit-gradient(linear, left top, right top, from(#e44d26), to(#f16529));
+  background: linear-gradient(to right, #e44d26, #f16529);
   border-radius: 0 0 20px 20px;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   color: #fff;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: 300;
   text-transform: lowercase;
   z-index: 1;
@@ -57,13 +58,12 @@
   margin: 1rem 0 0;
   padding: 0.5rem;
   width: 60%;
-  background: #fff;
   border-radius: 5px;
+  background-color: #50B83C;
+  color: #fff;
   text-align: center;
   font-size: 1.3rem;
   z-index: 1;
-  -webkit-transition: all 1.5s 1s;
-  transition: all 1.5s 1s;
 }
 
 .search {
@@ -71,7 +71,8 @@
   top: 0.5rem;
   padding: 1.1rem 0;
   border-radius: 10px;
-  background-color: #E83600;
+  background: -webkit-gradient(linear, left top, right top, from(#e44d26), to(#f16529));
+  background: linear-gradient(to right, #e44d26, #f16529);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   text-align: center;
@@ -80,21 +81,21 @@
 
 .search__search-icon {
   position: relative;
-  top: 0.3rem;
+  top: 0.2rem;
   left: 2.5rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.2rem;
+  height: 1.1rem;
 }
 
 .search__search-input {
-  padding: 1rem 1rem 1rem 3.5rem;
+  padding: 0.6rem 1rem 0.6rem 3.5rem;
   width: 30rem;
   font-size: 1.1rem;
   border: none;
   border-radius: 5px;
   -webkit-box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-  outline-color: #E83600;
+  outline-color: #D7D8DB;
 }
 
 .movie-card {
@@ -102,37 +103,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 1.5rem 0;
-  -webkit-animation: 4s ease-in 0s movie-listings-card-display;
-          animation: 4s ease-in 0s movie-listings-card-display;
-}
-
-@-webkit-keyframes movie-listings-card-display {
-  from {
-    display: none;
-    margin: 1.5rem 0 1.5rem -50rem;
-    -webkit-transition: all 1s;
-    transition: all 1s;
-  }
-  to {
-    display: -webkit-box;
-    display: flex;
-    margin: 1.5rem 0;
-  }
-}
-
-@keyframes movie-listings-card-display {
-  from {
-    display: none;
-    margin: 1.5rem 0 1.5rem -50rem;
-    -webkit-transition: all 1s;
-    transition: all 1s;
-  }
-  to {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 1.5rem 0;
-  }
 }
 
 .movie-card__img {
@@ -149,14 +119,14 @@
   position: relative;
   right: 1rem;
   padding: 1rem 1rem 1.5rem 3rem;
-  width: 20rem;
+  width: 14rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background: #fff;
   border-radius: 20px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 8px 8px rgba(0, 0, 0, 0.15), 0 7px 8px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 8px 8px rgba(0, 0, 0, 0.15), 0 7px 8px rgba(0, 0, 0, 0.05);
 }
 
 .movie-card__title {
@@ -172,10 +142,11 @@
   padding: 0.4rem 1.4rem;
   border-radius: 50px;
   border: none;
-  background-color: #E83600;
+  background: -webkit-gradient(linear, left top, right top, from(#e44d26), to(#f16529));
+  background: linear-gradient(to right, #e44d26, #f16529);
   color: #fff;
   font-size: 1.1rem;
-  outline-color: #E83600;
+  outline-color: #D7D8DB;
 }
 
 .movie-card__button:hover {
@@ -183,8 +154,8 @@
 }
 
 .nominations--animation {
-  -webkit-animation: 0.5s ease-in 0s nominations-card-display;
-          animation: 0.5s ease-in 0s nominations-card-display;
+  -webkit-animation: 0.3s ease-in 0s nominations-card-display;
+          animation: 0.3s ease-in 0s nominations-card-display;
 }
 
 @-webkit-keyframes nominations-card-display {
@@ -217,7 +188,7 @@
 }
 
 .nominations--img {
-  width: 100px;
+  width: 110px;
   height: auto;
   min-height: 100px;
   border-radius: 20px;
@@ -238,7 +209,7 @@
 
 .sections__movie-listings {
   margin: 1rem 0.5rem 0 1rem;
-  width: 60%;
+  width: 63%;
 }
 
 .sections__movie-listings__content {
@@ -247,8 +218,8 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 1rem 0;
-  height: 80vh;
-  background-color: #fff;
+  height: 78vh;
+  background: #fff;
   border-radius: 0 0 10px 10px;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -258,14 +229,14 @@
 
 .sections__movie-listings__content__placeholder {
   margin: 0 0 10rem;
-  color: #E83600;
-  opacity: 0.7;
+  opacity: 0.6;
   text-align: center;
   font-size: 1.8rem;
 }
 
 .sections__movie-listings__content__error {
   margin: 0 0 10rem;
+  opacity: 0.8;
   text-align: center;
   font-size: 1.8rem;
 }
@@ -318,15 +289,16 @@
 .sections__nominations__title {
   position: relative;
   top: 0.5rem;
-  padding: 1.6rem 0;
+  padding: 1.4rem 0;
   border-radius: 10px;
-  background-color: #E83600;
+  background: -webkit-gradient(linear, left top, right top, from(#e44d26), to(#f16529));
+  background: linear-gradient(to right, #e44d26, #f16529);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  text-shadow: 0 7px 5px rgba(0, 0, 0, 0.22), 0 1px 2px rgba(0, 0, 0, 0.24);
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.22), 0 1px 2px rgba(0, 0, 0, 0.24);
   color: #fff;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 400;
   z-index: 2;
 }
@@ -336,7 +308,7 @@
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding: 1rem 0;
-  height: 80vh;
+  height: 78vh;
   background: #fff;
   border-radius: 0 0 10px 10px;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -347,8 +319,7 @@
 
 .sections__nominations__content__placeholder {
   margin: 16rem 0 0;
-  color: #E83600;
-  opacity: 0.7;
+  opacity: 0.6;
   text-align: center;
   font-size: 1.6rem;
 }
@@ -373,7 +344,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #F4F5FA;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body button {
@@ -394,15 +365,15 @@ body button:hover {
       flex-wrap: wrap;
   position: relative;
   top: -4rem;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   z-index: 0;
 }
 
 .sections--with-banner {
   position: relative;
   top: 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 /*# sourceMappingURL=App.css.map */

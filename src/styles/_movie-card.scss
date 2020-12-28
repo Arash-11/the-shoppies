@@ -2,20 +2,6 @@
   @extend %flex-row;
   justify-content: center;
   margin: 1.5rem 0;
-  // animation: duration | easing-function | delay | name
-  animation: 4s ease-in 0s movie-listings-card-display;
-}
-
-@keyframes movie-listings-card-display {
-  from {
-    display: none;
-    margin: 1.5rem 0 1.5rem -50rem;
-    transition: all 1s;
-  }
-  to {
-    display: flex;
-    margin: 1.5rem 0;
-  }
 }
 
 .movie-card__img {
@@ -31,7 +17,7 @@
   position: relative;
   right: 1rem;
   padding: 1rem 1rem 1.5rem 3rem;
-  width: 20rem;
+  width: 14rem;
   height: fit-content;
   background: #fff;
   border-radius: 20px;
@@ -50,10 +36,10 @@
   padding: 0.4rem 1.4rem;
   border-radius: 50px;
   border: none;
-  background-color: $orange-red;
+  background: $orange-red;
   color: #fff;
   font-size: 1.1rem;
-  outline-color: $orange-red;
+  outline-color: $gainsboro;
   &:hover {
     opacity: 0.85;
   }
@@ -61,7 +47,7 @@
 
 .nominations--animation {
   // animation: duration | easing-function | delay | direction | name
-  animation: 0.5s ease-in 0s nominations-card-display;
+  animation: 0.3s ease-in 0s nominations-card-display;
 }
 
 @keyframes nominations-card-display {
@@ -77,7 +63,7 @@
 }
 
 .nominations--img {
-  width: 100px;
+  width: 110px;
   height: auto;
   min-height: 100px;
   border-radius: 20px;

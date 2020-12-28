@@ -1,5 +1,5 @@
 import React , { useState , useContext } from 'react';
-import MovieContext from '../MovieContext';
+import MovieContext from '../Context';
 import axios from 'axios';
 import Searchbar from '../components/Searchbar';
 import MovieCard from '../components/MovieCard';
@@ -67,7 +67,7 @@ function MovieListings(props) {
   }
 
   const selectMovie = (movieID) => {
-    if (nominationsArray.length === 5) return null;
+    if (isNominationsListCompleted) return null;
     // get movie info associated with this movieID from 'moviesData' array
     const selectedMovie = moviesData.find(movie => movie.id === movieID);
     props.nominateMovie(selectedMovie);

@@ -17,7 +17,8 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: $whitesmoke;
-  overflow: hidden;
+  overflow-x: hidden;
+  @extend %custom-scrollbar;
 }
 
 body button {
@@ -34,12 +35,12 @@ body button {
   flex-wrap: wrap;
   position: relative;
   top: -4rem;
-  transition: all 0.5s;
+  transition: all 0.3s;
   z-index: 0;
 }
 
 .sections--with-banner {
   position: relative;
   top: 0;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }

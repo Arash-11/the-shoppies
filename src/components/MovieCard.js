@@ -11,7 +11,7 @@ function MovieCard(props) {
       <div className="movie-card__text-content">
         <p className="movie-card__title">
           {props.title} <span>({props.year})</span>
-        </p> 
+        </p>
         <button 
           onClick={() => props.selectMovie(props.id)}
           className={`movie-card__button ${props.shouldFadeButton ? "button--fade" : ""}`}

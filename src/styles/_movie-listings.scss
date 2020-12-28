@@ -3,7 +3,7 @@
 
 .sections__movie-listings {
   margin: 1rem 0.5rem 0 1rem;
-  width: 60%;
+  width: 63%;
 }
 
 .sections__movie-listings__content {
@@ -12,7 +12,7 @@
   flex-wrap: wrap;
   padding: $section-padding;
   height: $section-height;
-  background-color: #fff;
+  background: #fff;
   border-radius: 0 0 10px 10px;
   box-shadow: $section-shadow;
   overflow-y: auto;
@@ -20,13 +20,13 @@
   @extend %custom-scrollbar;
   &__placeholder {
     margin: 0 0 10rem;
-    color: $orange-red;
-    opacity: 0.7;
+    opacity: 0.6;
     text-align: center;
     font-size: 1.8rem;
   }
   &__error {
     margin: 0 0 10rem;
+    opacity: 0.8;
     text-align: center;
     font-size: 1.8rem;
   }
