@@ -3,8 +3,8 @@ import './App.css';
 import Heading from './components/Heading';
 import Banner from './components/Banner';
 import MovieCard from './components/MovieCard';
-import Nominations from './components/Nominations';
 import MovieListings from './sections/MovieListings';
+import Nominations from './sections/Nominations';
 import MovieContext from './Context';
 
 const App = () => {
