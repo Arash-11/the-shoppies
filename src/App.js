@@ -1,4 +1,4 @@
-import React , { useState } from 'react';
+import React , { useState , useEffect } from 'react';
 import './App.css';
 import Heading from './components/Heading';
 import Banner from './components/Banner';
@@ -9,6 +9,13 @@ import MovieContext from './Context';
 
 const App = () => {
   const [nominations, setNominations] = useState([]);
+
+  // scroll to top of page when banner is displayed - useful when on a mobile device
+  useEffect(() => {
+    if (nominations.length === 5) {
+      window.scrollTo(0, 0);
+    }
+  }, [nominations]);
 
   const nominateMovie = (selectedMovie) => {
     // ensure nominations list does not add a duplicate

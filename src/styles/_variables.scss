@@ -5,31 +5,46 @@ $gainsboro-light: #E1E2E6;
 $green: #50B83C;
 
 $section-padding: 1rem 0;
+$section-padding-mobile: 0.8rem 0 0.8rem 1rem;
 $section-height: 78vh;
+$section-height-mobile: 70vh;
 $section-height-with-banner: 73vh;
 $section-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
 $movie-card-shadow: 0 8px 8px rgba(0,0,0,0.15), 0 7px 8px rgba(0,0,0,0.05);
 
-%flex-row {
+@mixin flex-row {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-%flex-col {
+@mixin flex-col {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-%custom-scrollbar {
+@mixin custom-scrollbar {
   &::-webkit-scrollbar {
     width: 0.7rem;
   }
   &::-webkit-scrollbar-thumb {
       background-color: $gainsboro-light;
       border-radius: 20px;
+  }
+  &::-webkit-scrollbar-track {
+      background-color: #fff;
+  }
+}
+
+@mixin custom-scrollbar-mobile {
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+  &::-webkit-scrollbar-thumb {
+      background-color: $gainsboro-light;
+      border-radius: 10px;
   }
   &::-webkit-scrollbar-track {
       background-color: #fff;

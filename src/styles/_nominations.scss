@@ -1,6 +1,11 @@
 .sections__nominations {
   margin: 1rem 1rem 0 0.5rem;
   width: 32%;
+
+  @media screen and (max-width: 800px) {
+    margin: 1rem 0.5rem;
+    width: 92%;
+  }
 }
 
 .sections__nominations__title {
@@ -16,11 +21,16 @@
   font-size: 1.3rem;
   font-weight: 400;
   z-index: 2;
+
+  @media screen and (max-width: 800px) {
+    padding: 0.7rem 0;
+    font-size: 1rem;
+  }
 }
 
 .sections__nominations__content {
   // using flexbox here to prevent the margin between the 'movie cards' from collapsing
-  @extend %flex-col;
+  @include flex-col;
   justify-content: flex-start;
   padding: $section-padding;
   height: $section-height;
@@ -29,12 +39,24 @@
   box-shadow: $section-shadow;
   overflow-y: auto;
   overflow-x: hidden;
-  @extend %custom-scrollbar;
-  &__placeholder {
-    margin: 16rem 0 0;
-    opacity: 0.6;
-    text-align: center;
-    font-size: 1.6rem;
+  @include custom-scrollbar;
+
+  @media screen and (max-width: 800px) {
+    padding: $section-padding-mobile;
+    height: $section-height-mobile;
+    @include custom-scrollbar-mobile;
+  }
+}
+
+.sections__nominations__content__placeholder {
+  margin: 16rem 0 0;
+  opacity: 0.6;
+  text-align: center;
+  font-size: 1.6rem;
+
+  @media screen and (max-width: 800px) {
+    margin: 10rem 0 0;
+    font-size: 1rem;
   }
 }
 
