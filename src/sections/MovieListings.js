@@ -3,6 +3,7 @@ import MovieContext from '../Context';
 import axios from 'axios';
 import Searchbar from '../components/Searchbar';
 import MovieCard from '../components/MovieCard';
+import imagePlaceholder from '../image-na.jpg';
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 function MovieListings(props) {
@@ -57,12 +58,21 @@ function MovieListings(props) {
     (resultsArray || []).forEach(movie => {
       // 'Title', 'Year', 'Poster' here should be capitalized per the API's structure
       const { imdbID, Title, Year, Poster } = movie;
-      setMoviesData(previousValues => (
-        [
-          ...previousValues, 
-          { id: imdbID, title: Title, year: Year, img: Poster }
-        ]
-      ));
+      if (Poster === 'N/A') {
+        setMoviesData(previousValues => (
+          [
+            ...previousValues, 
+            { id: imdbID, title: Title, year: Year, img: imagePlaceholder}
+          ]
+        ));
+      } else {
+        setMoviesData(previousValues => (
+          [
+            ...previousValues, 
+            { id: imdbID, title: Title, year: Year, img: Poster }
+          ]
+        ));
+      }
     });
   }
 

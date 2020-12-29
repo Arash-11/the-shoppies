@@ -10,10 +10,12 @@
   box-sizing: border-box;
 }
 
+
 :root {
   font-size: 16px;
   scroll-behavior: smooth;
 }
+
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -22,6 +24,7 @@ body {
   @include custom-scrollbar;
 }
 
+
 body button {
   appearance: none;
   background: transparent;
@@ -29,6 +32,7 @@ body button {
     cursor: pointer;
   }
 }
+
 
 .sections {
   @include flex-row;
@@ -39,17 +43,18 @@ body button {
   transition: all 0.3s;
   z-index: 0;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: $mobile-screen-700) {
     top: -2.3rem;
   }
 }
+
 
 .sections--with-banner {
   position: relative;
   top: 0;
   transition: all 0.3s;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: $mobile-screen-700) {
     top: 1rem;
   }
 }

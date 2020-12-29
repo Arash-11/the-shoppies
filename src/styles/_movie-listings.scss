@@ -5,11 +5,17 @@
   margin: 1rem 0.5rem 0 1rem;
   width: 63%;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: $mobile-screen-700) {
+    margin: 0.8rem 0.5rem;
+    width: 92%;
+  }
+
+  @media screen and (min-width: $tablet-screen-701) and (max-width: $tablet-screen-1200) {
     margin: 0.8rem 0.5rem;
     width: 92%;
   }
 }
+
 
 .sections__movie-listings__content {
   @include flex-row;
@@ -24,7 +30,7 @@
   overflow-x: hidden;
   @include custom-scrollbar;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: $mobile-screen-700) {
     @include flex-col;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -32,7 +38,17 @@
     height: $section-height-mobile;
     @include custom-scrollbar-mobile;
   }
+
+  @media screen and (min-width: $tablet-screen-701) and (max-width: $tablet-screen-1200) {
+    @include flex-row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: $section-padding-mobile;
+    max-height: $movie-listing-height-tablet;
+    @include custom-scrollbar-mobile;
+  }
 }
+
 
 .sections__movie-listings__content__placeholder {
   margin: 0 0 10rem;
@@ -40,11 +56,16 @@
   text-align: center;
   font-size: 1.8rem;
 
-  @media screen and (max-width: 800px) {
-    margin: 0 0 20rem;
+  @media screen and (max-width: $mobile-screen-700) {
+    margin: 7rem 0 0;
     font-size: 1rem;
   }
+
+  @media screen and (min-width: $tablet-screen-701) and (max-width: $tablet-screen-1200) {
+    font-size: 1.2rem;
+  }
 }
+
 
 .sections__movie-listings__content__error {
   margin: 0 0 10rem;
@@ -52,11 +73,16 @@
   text-align: center;
   font-size: 1.8rem;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: $mobile-screen-700) {
     margin: 0 0 20rem;
     font-size: 1rem;
   }
+
+  @media screen and (min-width: $tablet-screen-701) and (max-width: $tablet-screen-1200) {
+    font-size: 1.2rem;
+  }
 }
+
 
 .spinner {
   position: relative;
@@ -69,12 +95,17 @@
   // animation: duration | easing-function | delay | name
   animation: 1.2s linear infinite spinning;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: $mobile-screen-700) {
     top: 5rem;
     width: 40px;
     height: 40px;
     border: 4px solid $gainsboro;
     border-top-color: transparent;
+  }
+
+  @media screen and (min-width: $tablet-screen-701) and (max-width: $tablet-screen-1200) {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -86,6 +117,7 @@
     transform: rotate(360deg);
   }
 }
+
 
 .movie-listings--banner {
   height: $section-height-with-banner;

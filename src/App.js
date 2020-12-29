@@ -13,7 +13,7 @@ const App = () => {
   // scroll to top of page when banner is displayed - useful when on a mobile device
   useEffect(() => {
     if (nominations.length === 5) {
-      window.scrollTo(0, 0);
+      setTimeout(() => window.scrollTo(0, 0), 500);
     }
   }, [nominations]);
 
