@@ -286,8 +286,7 @@
 
 @-webkit-keyframes nominations-card-display {
   0% {
-    display: none;
-    margin: 1.5rem 0 0 -50rem;
+    margin: 1.5rem 0 1.5rem -50rem;
     -webkit-transition: all 1s;
     transition: all 1s;
   }
@@ -300,8 +299,7 @@
 
 @keyframes nominations-card-display {
   0% {
-    display: none;
-    margin: 1.5rem 0 0 -50rem;
+    margin: 1.5rem 0 1.5rem -50rem;
     -webkit-transition: all 1s;
     transition: all 1s;
   }
@@ -561,9 +559,17 @@
 }
 
 .movie-listings--banner {
+  margin: 0 0 1rem 0;
   height: 73vh;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+@media screen and (min-width: 701px) and (max-width: 1200px) {
+  .movie-listings--banner {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .sections__nominations {
@@ -723,6 +729,7 @@
 }
 
 .nominations--banner {
+  margin: 0 0 1rem 0;
   height: 73vh;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
