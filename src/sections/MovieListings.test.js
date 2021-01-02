@@ -1,10 +1,9 @@
 import React from 'react';
-import { render, screen, cleanup, fireEvent } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import axios from 'axios';
-import MovieListings from './MovieListings';
 import MovieContext from '../Context';
-
-afterEach(cleanup);
+import MovieListings from './MovieListings';
 
 const nominationsArray = jest.fn(() => []);
 
@@ -23,8 +22,9 @@ describe('renders component without crashing', () => {
 });
 
 
-// behaviour when getMovieData function is succesful
-describe('behaviour when getMovieData function is succesful', () => {
+
+// behaviour when getMovieData function is successful
+describe('behaviour when getMovieData function is successful', () => {
   // displays spinner when too many results are available
   test('should display spinner when error message is "Too many results."', async () => {
     axios.get.mockResolvedValue({
@@ -37,11 +37,10 @@ describe('behaviour when getMovieData function is succesful', () => {
         <MovieListings />
       </MovieContext.Provider>
     );
-    const inputExample = 'a';
     // simulate user typing in letter/letters that has too many results.
-    fireEvent.change(screen.getByPlaceholderText('Search for movies...'), { target: { value: inputExample } });
+    userEvent.type(screen.getByPlaceholderText('Search for movies...'), 'a');
     const spinnerElement = await screen.findByTestId('spinner');
-    expect(spinnerElement).toHaveClass('spinner');
+    await waitFor(() => expect(spinnerElement).toHaveClass('spinner'));
   });
 
 
@@ -57,13 +56,13 @@ describe('behaviour when getMovieData function is succesful', () => {
         <MovieListings />
       </MovieContext.Provider>
     );
-    const inputExample = 'aaaaaa';
     // simulate user typing in letter/letters that has no search results.
-    fireEvent.change(screen.getByPlaceholderText('Search for movies...'), { target: { value: inputExample } });
+    userEvent.type(screen.getByPlaceholderText('Search for movies...'), 'aaaaaa');
     const noResultsElement = await screen.findByTestId('no-results');
-    expect(noResultsElement).toHaveTextContent('No search results available.');
+    await waitFor(() => expect(noResultsElement).toHaveTextContent('No search results available.'));
   });
 });
+
 
 
 // behaviour when getMovieData function results in an error
@@ -78,9 +77,10 @@ describe('behaviour when getMovieData function results in an error', () => {
         <MovieListings />
       </MovieContext.Provider>
     );
-    const inputExample = 'something';
-    fireEvent.change(screen.getByPlaceholderText('Search for movies...'), { target: { value: inputExample } });
+    userEvent.type(screen.getByPlaceholderText('Search for movies...'), 'something');
     const wentWrongElement = await screen.findByTestId('went-wrong');
-    expect(wentWrongElement).toHaveTextContent('Something went wrong, please try again later.');
+    await waitFor(() => {
+      expect(wentWrongElement).toHaveTextContent('Something went wrong, please try again later.');
+    });
   });
 });
