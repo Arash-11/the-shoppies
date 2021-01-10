@@ -96,10 +96,10 @@
 
 @media screen and (max-width: 700px) {
   .search__search-icon {
-    top: 0.15rem;
-    left: 1.8rem;
-    width: 1rem;
-    height: 1rem;
+    top: 0.4rem;
+    left: 2.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 
@@ -116,9 +116,9 @@
 
 @media screen and (max-width: 700px) {
   .search__search-input {
-    padding: 0.6rem 0.5rem 0.6rem 2.5rem;
-    width: 16rem;
-    font-size: 0.9rem;
+    padding: 1rem 0.5rem 1rem 3rem;
+    width: 18rem;
+    font-size: 1rem;
   }
 }
 
@@ -610,15 +610,14 @@
 
 @media screen and (max-width: 700px) {
   .sections__nominations__title {
-    padding: 0.7rem 0;
-    font-size: 1rem;
+    padding: 0.9rem 0;
+    font-size: 1.2rem;
   }
 }
 
 @media screen and (min-width: 701px) and (max-width: 1200px) {
   .sections__nominations__title {
     padding: 1rem 0;
-    font-size: 1.1rem;
   }
 }
 
