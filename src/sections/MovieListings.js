@@ -9,7 +9,7 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 
 
 function MovieListings(props) {
-  const endpoint = `http://www.omdbapi.com/?apikey=${API_KEY}&type=movie`;
+  const endpoint = `https://www.omdbapi.com/?apikey=${API_KEY}&type=movie`;
 
   // state for Searchbar input value
   const [inputValue, setInputValue] = useState('');
