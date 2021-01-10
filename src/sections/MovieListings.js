@@ -7,6 +7,7 @@ import MovieCard from '../components/MovieCard';
 import imagePlaceholder from '../image-na.jpg';
 const API_KEY = process.env.REACT_APP_API_KEY;
 
+
 function MovieListings(props) {
   const endpoint = `http://www.omdbapi.com/?apikey=${API_KEY}&type=movie`;
 
