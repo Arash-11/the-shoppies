@@ -44,7 +44,11 @@ body button {
   z-index: 0;
 
   @media screen and (max-width: $mobile-screen-700) {
-    top: -2.3rem;
+    top: -2.6rem;
+  }
+
+  @media screen and (min-width: $tablet-screen-701) and (max-width: $tablet-screen-1200) {
+    top: -4.5rem;
   }
 }
 
