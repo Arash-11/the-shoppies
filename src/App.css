@@ -116,7 +116,7 @@
 
 @media screen and (max-width: 700px) {
   .search__search-input {
-    padding: 0.9rem 0.5rem 0.9rem 3.5rem;
+    padding: 0.8rem 0.5rem 0.8rem 3rem;
     width: 18rem;
   }
 }
@@ -140,7 +140,7 @@
 
 @media screen and (max-width: 700px) {
   .movie-card {
-    margin: 2em 0 4em 0.8em;
+    margin: 3rem 0 3rem 0.8rem;
   }
 }
 
