@@ -18,7 +18,7 @@ function Nominations(props) {
 
 Nominations.propTypes = {
   count: PropTypes.number,
-  // not going to test PropTypes for children because there are no children initially
+  // not going to test PropTypes for 'children' because 'children' is initially undefined
 };
 
 export default Nominations;
