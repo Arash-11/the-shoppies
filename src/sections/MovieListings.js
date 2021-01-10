@@ -9,7 +9,7 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 
 
 function MovieListings(props) {
-  const endpoint = `https://www.omdbapi.com/?apikey=${API_KEY}&type=movie`;
+  const endpoint = `http://www.omdbapi.com/?apikey=${API_KEY}&type=movie`;
 
   // state for Searchbar input value
   const [inputValue, setInputValue] = useState('');
@@ -121,7 +121,7 @@ function MovieListings(props) {
           <p className="sections__movie-listings__content__error" data-testid="no-results">No search results available.</p>
         }
         {
-          errorMessage === 'Something went wrong.' &&
+          errorMessage === 'Something went wrong.' && moviesData.length < 1 &&
           <p className="sections__movie-listings__content__error" data-testid="went-wrong">Something went wrong, please try again later.</p>
         }
       </div>
