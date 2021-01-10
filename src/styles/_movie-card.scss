@@ -4,11 +4,11 @@
   margin: 1.5rem 0;
 
   @media screen and (max-width: $mobile-screen-700) {
-    margin: 6rem 0 6rem 0.6rem;
+    margin: 5.5rem 0 5.5rem 0.6rem;
   }
 
   @media screen and (min-width: $tablet-screen-701) and (max-width: $tablet-screen-1200) {
-    margin: 6rem 0 6rem 0.6rem;
+    margin: 5.5rem 0 5.5rem 0.6rem;
   }
 }
 
@@ -22,13 +22,13 @@
   z-index: 1;
 
   @media screen and (max-width: $mobile-screen-700) {
-    width: 100px;
+    width: 110px;
     min-height: 100px;
     border-radius: 10px;
   }
 
   @media screen and (min-width: $tablet-screen-701) and (max-width: $tablet-screen-1200) {
-    width: 100px;
+    width: 110px;
     min-height: 120px;
     border-radius: 10px;
   }
@@ -47,7 +47,7 @@
 
   @media screen and (max-width: $mobile-screen-700) {
     right: 0.5rem;
-    padding: 0.8rem 0.5rem 1rem 1.5rem;
+    padding: 0.5rem 0.5rem 1rem 1.5rem;
     width: 12rem;
     border-radius: 10px;
   }
@@ -67,12 +67,12 @@
 
   @media screen and (max-width: $mobile-screen-700) {
     margin: 0 0 1.2rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   @media screen and (min-width: $tablet-screen-701) and (max-width: $tablet-screen-1200) {
     margin: 0 0 1.2rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   span {
