@@ -1,4 +1,5 @@
 import React , { useState , useContext } from 'react';
+import PropTypes from 'prop-types';
 import MovieContext from '../Context';
 import axios from 'axios';
 import Searchbar from '../components/Searchbar';
@@ -126,5 +127,11 @@ function MovieListings(props) {
     </section>
   );
 }
+
+
+MovieListings.propTypes = {
+  nominateMovie: PropTypes.func
+};
+
 
 export default MovieListings;

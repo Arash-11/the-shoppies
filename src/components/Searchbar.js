@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Searchbar(props) {
   return (
@@ -17,5 +18,10 @@ function Searchbar(props) {
     </div>
   );
 }
+
+Searchbar.propTypes = {
+  inputValue: PropTypes.string,
+  handleChange: PropTypes.func
+};
 
 export default Searchbar;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Nominations(props) {
   return (
@@ -14,5 +15,10 @@ function Nominations(props) {
     </section>
   );
 }
+
+Nominations.propTypes = {
+  count: PropTypes.number,
+  children: PropTypes.any.isRequired
+};
 
 export default Nominations;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function MovieCard(props) {
   return (
@@ -22,5 +23,19 @@ function MovieCard(props) {
     </div>
   );
 }
+
+MovieCard.propTypes = {
+  buttonLabel: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool
+  ]),
+  title: PropTypes.string,
+  year: PropTypes.string,
+  id: PropTypes.string,
+  shouldFadeButton: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.bool
+  ])
+};
 
 export default MovieCard;
