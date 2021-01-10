@@ -113,15 +113,15 @@ function MovieListings(props) {
           <p className="sections__movie-listings__content__placeholder">Search for movies to add to nomination list.</p>
         }
         {
-          errorMessage === 'Too many results.' && moviesData.length < 1 &&
+          inputValue === '' && errorMessage === 'Too many results.' && moviesData.length < 1 &&
           <div className="spinner" data-testid="spinner"></div>
         }
         {
-          errorMessage === 'Movie not found!' && moviesData.length < 1 &&
+          inputValue === '' && errorMessage === 'Movie not found!' && moviesData.length < 1 &&
           <p className="sections__movie-listings__content__error" data-testid="no-results">No search results available.</p>
         }
         {
-          errorMessage === 'Something went wrong.' && moviesData.length < 1 &&
+          inputValue === '' && errorMessage === 'Something went wrong.' &&
           <p className="sections__movie-listings__content__error" data-testid="went-wrong">Something went wrong, please try again later.</p>
         }
       </div>

@@ -7,7 +7,7 @@
 
   @media screen and (max-width: $mobile-screen-700) {
     margin: 0.8rem 0.5rem;
-    width: 90%;
+    width: $section-width-mobile;
   }
 
   @media screen and (min-width: $tablet-screen-701) and (max-width: $tablet-screen-1200) {
@@ -58,10 +58,12 @@
 
   @media screen and (max-width: $mobile-screen-700) {
     margin: 7rem 0 0;
+    width: 95%;
     font-size: 1rem;
   }
 
   @media screen and (min-width: $tablet-screen-701) and (max-width: $tablet-screen-1200) {
+    width: 95%;
     font-size: 1.2rem;
   }
 }
@@ -75,10 +77,12 @@
 
   @media screen and (max-width: $mobile-screen-700) {
     margin: 0 0 20rem;
+    width: 95%;
     font-size: 1rem;
   }
 
   @media screen and (min-width: $tablet-screen-701) and (max-width: $tablet-screen-1200) {
+    width: 95%;
     font-size: 1.2rem;
   }
 }

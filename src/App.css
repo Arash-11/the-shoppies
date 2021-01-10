@@ -97,7 +97,7 @@
 @media screen and (max-width: 700px) {
   .search__search-icon {
     top: 0.25rem;
-    left: 2.3rem;
+    left: 2.1rem;
     width: 1.2rem;
     height: 1.2rem;
   }
@@ -140,13 +140,13 @@
 
 @media screen and (max-width: 700px) {
   .movie-card {
-    margin: 4rem 0 4rem 0.7rem;
+    margin: 5rem 0 5rem 0.7rem;
   }
 }
 
 @media screen and (min-width: 701px) and (max-width: 1200px) {
   .movie-card {
-    margin: 1rem 0 1rem 0.8rem;
+    margin: 5rem 0 5rem 0.7rem;
   }
 }
 
@@ -162,7 +162,7 @@
 
 @media screen and (max-width: 700px) {
   .movie-card__img {
-    width: 90px;
+    width: 100px;
     min-height: 100px;
     border-radius: 10px;
   }
@@ -216,7 +216,7 @@
 @media screen and (max-width: 700px) {
   .movie-card__title {
     margin: 0 0 1.2rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
@@ -233,13 +233,13 @@
 
 @media screen and (max-width: 700px) {
   .movie-card__title span {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }
 
 @media screen and (min-width: 701px) and (max-width: 1200px) {
   .movie-card__title span {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -316,7 +316,7 @@
 
 @media screen and (max-width: 700px) {
   .nominations--img {
-    width: 70px;
+    width: 100px;
     min-height: 100px;
     border-radius: 10px;
   }
@@ -348,7 +348,7 @@
 @media screen and (max-width: 700px) {
   .sections__movie-listings {
     margin: 0.8rem 0.5rem;
-    width: 90%;
+    width: 88%;
   }
 }
 
@@ -470,12 +470,14 @@
 @media screen and (max-width: 700px) {
   .sections__movie-listings__content__placeholder {
     margin: 7rem 0 0;
+    width: 95%;
     font-size: 1rem;
   }
 }
 
 @media screen and (min-width: 701px) and (max-width: 1200px) {
   .sections__movie-listings__content__placeholder {
+    width: 95%;
     font-size: 1.2rem;
   }
 }
@@ -490,12 +492,14 @@
 @media screen and (max-width: 700px) {
   .sections__movie-listings__content__error {
     margin: 0 0 20rem;
+    width: 95%;
     font-size: 1rem;
   }
 }
 
 @media screen and (min-width: 701px) and (max-width: 1200px) {
   .sections__movie-listings__content__error {
+    width: 95%;
     font-size: 1.2rem;
   }
 }
@@ -573,7 +577,7 @@
 @media screen and (max-width: 700px) {
   .sections__nominations {
     margin: 1rem 0.5rem;
-    width: 90%;
+    width: 88%;
   }
 }
 
