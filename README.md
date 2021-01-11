@@ -1,25 +1,61 @@
-Work still in progress...
+# The Shoppies: Movie awards for entrepreneurs
 
-<!-- # Getting Started with Create React App
+<br />
 
-We're building a simple interface that makes it easy to:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ed93fcc2-9687-484a-859c-4ab6ef610ab1/deploy-status)](https://app.netlify.com/sites/shoppies11/deploys)
+![Website](https://img.shields.io/website?down_color=grey&down_message=down&up_color=green&up_message=up&url=https%3A%2F%2Fshoppies11.netlify.app%2F)
+![GitHub top language](https://img.shields.io/github/languages/top/Arash-11/the-shoppies)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Arash-11/the-shoppies)
+![GitHub repo size](https://img.shields.io/github/repo-size/Arash-11/the-shoppies)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/Arash-11/the-shoppies)
+
+Live site: https://shoppies11.netlify.app/
+
+![Preview image of website](https://github.com/Arash-11/organizr/blob/main/the-shoppies.png)
+
+<br />
+
+## About the project
+
+A webpage that can search [OMDB](http://www.omdbapi.com/) for movies, and allow the user to save their favourite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
+
+The webpage should have a simple interface that makes it easy to:
 
 - Search OMDB and display the results (movies only)
 - Add a movie from the search results to our nomination list
 - View the list of films already nominated
 - Remove a nominee from the nomination list
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and has been deployed on Netlify.
 
-Requirements:
+<br />
+
+## Technical requirements:
 
 [x] Search results should come from OMDB's API (free API key: http://www.omdbapi.com/apikey.aspx).
+
 [x] Each search result should list at least its title, year of release and a button to nominate that film.
+
 [x] Updates to the search terms should update the result list.
+
 [x] Movies in search results can be added and removed from the nomination list.
+
 [x] If a search result has already been nominated, disable its nominate button.
+
 [x] Display a banner when the user has 5 nominations.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />
+
+## Technologies used
+
+- HTML / SCSS
+- React
+- Jest
+- React Testing Library
+- OMDb API
+- Netlify
+
+<br />
 
 ## Available Scripts
 
@@ -86,4 +122,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
