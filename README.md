@@ -11,7 +11,7 @@
 
 Live site: https://shoppies11.netlify.app/
 
-![Preview image of website](https://github.com/Arash-11/organizr/blob/main/the-shoppies.png)
+![Preview image of website](https://github.com/Arash-11/the-shoppies/blob/main/the-shoppies.png)
 
 <br />
 
