@@ -43,7 +43,11 @@ body button {
   transition: all 0.3s;
   z-index: 0;
 
-  @media screen and (max-width: $mobile-screen-700) {
+  @media screen and (max-width: $mobile-screen-350) {
+    top: -2.3rem;
+  }
+
+  @media screen and (min-width: $mobile-screen-350) and (max-width: $mobile-screen-700) {
     top: -2.6rem;
   }
 

@@ -2,7 +2,12 @@
   margin: 1rem 1rem 0 0.5rem;
   width: 32%;
 
-  @media screen and (max-width: $mobile-screen-700) {
+  @media screen and (max-width: $mobile-screen-350) {
+    margin: 0.8rem 0.5rem;
+    width: $section-width-mobile;
+  }
+
+  @media screen and (min-width: $mobile-screen-350) and (max-width: $mobile-screen-700) {
     margin: 1rem 0.5rem;
     width: $section-width-mobile;
   }
@@ -28,7 +33,12 @@
   font-weight: 400;
   z-index: 2;
 
-  @media screen and (max-width: $mobile-screen-700) {
+  @media screen and (max-width: $mobile-screen-350) {
+    padding: 0.8rem 0;
+    font-size: 1rem;
+  }
+
+  @media screen and (min-width: $mobile-screen-350) and (max-width: $mobile-screen-700) {
     padding: 0.9rem 0;
     font-size: 1.2rem;
   }
@@ -51,7 +61,16 @@
   overflow-x: hidden;
   @include custom-scrollbar;
 
-  @media screen and (max-width: $mobile-screen-700) {
+  @media screen and (max-width: $mobile-screen-350) {
+    @include flex-row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: $section-padding-mobile;
+    height: $section-height-mobile;
+    @include custom-scrollbar-mobile;
+  }
+
+  @media screen and (min-width: $mobile-screen-350) and (max-width: $mobile-screen-700) {
     @include flex-row;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -77,13 +96,21 @@
   text-align: center;
   font-size: 1.6rem;
 
-  @media screen and (max-width: $mobile-screen-700) {
-    margin: 10rem 0 0;
+  @media screen and (max-width: $mobile-screen-350) {
+    margin: 8rem 0 0;
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  @media screen and (min-width: $mobile-screen-350) and (max-width: $mobile-screen-700) {
+    margin: 0 0 2rem;
+    width: 95%;
     font-size: 1rem;
   }
 
   @media screen and (min-width: $tablet-screen-701) and (max-width: $tablet-screen-1200) {
-    margin: 15rem 0 0;
+    margin: 0 0 2rem;
+    width: 95%;
     font-size: 1.2rem;
   }
 }

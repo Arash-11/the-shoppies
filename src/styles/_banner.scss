@@ -9,7 +9,13 @@
   font-size: 1.3rem;
   z-index: 1;
 
-  @media screen and (max-width: $mobile-screen-700) {
+  @media screen and (max-width: $mobile-screen-350) {
+    margin: 0;
+    width: 92%;
+    font-size: 0.8rem;
+  }
+
+  @media screen and (min-width: $mobile-screen-350) and (max-width: $mobile-screen-700) {
     margin: 0;
     width: 92%;
     font-size: 1rem;

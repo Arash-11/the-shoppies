@@ -8,7 +8,12 @@
   text-align: center;
   z-index: 2;
 
-  @media screen and (max-width: $mobile-screen-700) {
+  @media screen and (max-width: $mobile-screen-350) {
+    top: 0.3rem;
+    padding: 0.8rem 0.7rem 0.8rem 0;
+  }
+
+  @media screen and (min-width: $mobile-screen-350) and (max-width: $mobile-screen-700) {
     top: 0.3rem;
     padding: 0.8rem 0.7rem 0.8rem 0;
   }
@@ -26,7 +31,14 @@
   width: 1.2rem;
   height: 1.1rem;
 
-  @media screen and (max-width: $mobile-screen-700) {
+  @media screen and (max-width: $mobile-screen-350) {
+    top: 0.2rem;
+    left: 2.1rem;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  @media screen and (min-width: $mobile-screen-350) and (max-width: $mobile-screen-700) {
     top: 0.25rem;
     left: 2.1rem;
     width: 1.2rem;
@@ -44,7 +56,13 @@
   box-shadow: 0 8px 10px rgba(0,0,0,0.10);
   outline-color: $gainsboro;
 
-  @media screen and (max-width: $mobile-screen-700) {
+  @media screen and (max-width: $mobile-screen-350) {
+    padding: 0.5rem 0.5rem 0.5rem 3rem;
+    width: 75vw;
+    font-size: 1rem;
+  }
+
+  @media screen and (min-width: $mobile-screen-350) and (max-width: $mobile-screen-700) {
     padding: 0.7rem 0.5rem 0.7rem 3rem;
     width: 75vw;
   }
