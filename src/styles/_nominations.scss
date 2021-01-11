@@ -42,7 +42,10 @@
 .sections__nominations__content {
   // using flexbox here to prevent the margin between the 'movie cards' from collapsing
   @include flex-col;
-  justify-content: flex-start;
+  justify-content: space-between;
+  // @include flex-row;
+  // justify-content: space-evenly;
+  // flex-wrap: wrap;
   padding: $section-padding;
   height: $section-height;
   background: #fff;
