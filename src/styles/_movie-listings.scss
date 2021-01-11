@@ -31,18 +31,12 @@
   @include custom-scrollbar;
 
   @media screen and (max-width: $mobile-screen-700) {
-    @include flex-col;
-    justify-content: space-between;
-    flex-wrap: nowrap;
     padding: $section-padding-mobile;
     height: $section-height-mobile;
     @include custom-scrollbar-mobile;
   }
 
   @media screen and (min-width: $tablet-screen-701) and (max-width: $tablet-screen-1200) {
-    @include flex-row;
-    justify-content: space-around;
-    flex-wrap: wrap;
     padding: $section-padding-mobile;
     max-height: $movie-listing-height-tablet;
     @include custom-scrollbar-mobile;
@@ -96,7 +90,6 @@
   border-radius: 50%;
   border: 5px solid $gainsboro;
   border-top-color: transparent;
-  // animation: duration | easing-function | delay | name
   animation: 1.2s linear infinite spinning;
 
   @media screen and (max-width: $mobile-screen-700) {

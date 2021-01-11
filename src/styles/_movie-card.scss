@@ -5,7 +5,8 @@
 
   @media screen and (max-width: $mobile-screen-700) {
     // margin: 5.5rem 0 5.5rem 0.6rem;
-    margin: 1.5vmin 0 1.5vmin 0.6rem;
+    margin: 10px 0 10px 10px;
+    // margin: 1.5vmin 0 1.5vmin 0.6rem;
   }
 
   @media screen and (min-width: $tablet-screen-701) and (max-width: $tablet-screen-1200) {
@@ -113,8 +114,7 @@
 
 
 .nominations--animation {
-  // animation: duration | easing-function | delay | direction | name
-  animation: 0.3s ease-in 0s nominations-card-display;
+  animation: 0.3s ease-in nominations-card-display;
 }
 
 @keyframes nominations-card-display {

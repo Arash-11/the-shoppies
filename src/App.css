@@ -140,13 +140,13 @@
 
 @media screen and (max-width: 700px) {
   .movie-card {
-    margin: 1.5vmin 0 1.5vmin 0.6rem;
+    margin: 10px 0 10px 10px;
   }
 }
 
 @media screen and (min-width: 701px) and (max-width: 1200px) {
   .movie-card {
-    margin: 5.5rem 0 5.5rem 0.6rem;
+    margin: 1.5vmin 0 1.5vmin 0.6rem;
   }
 }
 
@@ -273,8 +273,8 @@
 }
 
 .nominations--animation {
-  -webkit-animation: 0.3s ease-in 0s nominations-card-display;
-          animation: 0.3s ease-in 0s nominations-card-display;
+  -webkit-animation: 0.3s ease-in nominations-card-display;
+          animation: 0.3s ease-in nominations-card-display;
 }
 
 @-webkit-keyframes nominations-card-display {
@@ -399,21 +399,6 @@
 
 @media screen and (max-width: 700px) {
   .sections__movie-listings__content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
     padding: 0.8rem 0;
     height: 60vh;
   }
@@ -431,20 +416,6 @@
 
 @media screen and (min-width: 701px) and (max-width: 1200px) {
   .sections__movie-listings__content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     padding: 0.8rem 0;
     max-height: 65vh;
   }
