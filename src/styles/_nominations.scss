@@ -41,7 +41,7 @@
 
 .sections__nominations__content {
   @include flex-col;
-  justify-content: space-around;
+  justify-content: flex-start;
   padding: $section-padding;
   height: $section-height;
   background: #fff;
